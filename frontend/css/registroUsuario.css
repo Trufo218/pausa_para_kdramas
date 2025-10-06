@@ -7,7 +7,7 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 }
 
 input[type="text"],
@@ -34,4 +34,12 @@ button {
 
 button:hover {
     background-color: #d81b60;
+}
+
+h1{
+    color: #fff;
+}
+
+main{
+    background-image: url("../assets/img/Registro_img/Collage\ K-DRAMA.jpeg");
 }
