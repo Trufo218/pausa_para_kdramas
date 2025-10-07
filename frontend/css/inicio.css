@@ -1,6 +1,25 @@
+main {
+  position: relative;
+  background: url("./../assets/img/Inicio_img/fondo_web.jpg") no-repeat center center / cover;
+  min-height: 100vh; /* opcional, para cubrir toda la pantalla */
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* capa oscura semitransparente */
+  z-index: 1;
+}
+
+main * {
+  position: relative;
+  z-index: 2; /* para que el contenido quede por encima del overlay */
+}
+
 main img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
 }

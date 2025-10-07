@@ -1,3 +1,25 @@
+main {
+    position: relative; /* Necesario para posicionar el overlay */
+    background: url("../assets/img/Registro_img/Collage K-DRAMA.jpeg");
+    min-height: 100vh; /* Para cubrir toda la pantalla */
+}
+
+/* 🔹 Capa intermedia para oscurecer el fondo */
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Ocupa todo el área del main */
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un 50% */
+    z-index: 1; /* Queda detrás del contenido pero encima del fondo */
+}
+
+/* 🔹 Todo el contenido del main debe quedar por encima del overlay */
+main * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos del formulario (tu código original) */
 form {
     background-color: white;
     padding: 30px;
@@ -34,12 +56,4 @@ button {
 
 button:hover {
     background-color: #d81b60;
-}
-
-h1{
-    color: #fff;
-}
-
-main{
-    background-image: url("../assets/img/Registro_img/Collage\ K-DRAMA.jpeg");
 }
