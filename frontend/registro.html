@@ -19,7 +19,7 @@
         </header>
         <main>
             <h1>REGISTRO DE USUARIO</h1>
-            <form action="" method="post">
+            <form action="" method="post" id="fromRegistro">
                 <label for="nombre">Nombre Completo:</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" required>
 
@@ -27,19 +27,20 @@
                 <input type="email" name="email" id="email" placeholder="Email" required>
 
                 <label for="password">Contraseña:</label>
-                <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <input type="password" name="password" id="password" placeholder="Contraseña" required minlength="8">
 
                 <label for="confirm_password">Confirmar Contraseña:</label>
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmación De Contraseña" required>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmación De Contraseña" required minlength="8">
 
                 <button type="reset">Resetear</button>
                 <button type="submit">Enviar</button>
             </form>
+            <p id="mensaje" style="color: red;"></p>
         </main>
         <footer>
             <p>&copy; 2025 Pausa Para K-dramas. Todos los derechos
                 reservados.</p>
         </footer>
-        <script type="module" src=""></script>
+        <script type="module" src="./js/registro.js"></script>
 </body>
 </html>
