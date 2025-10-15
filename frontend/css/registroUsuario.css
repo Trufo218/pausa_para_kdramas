@@ -57,3 +57,35 @@ button {
 button:hover {
     background-color: #d81b60;
 }
+
+
+
+/*Errores del formulario.*/
+  .campo {
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 250px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+input.error-input {
+    border-color: red;
+    background-color: #ffe6e6;
+  }
+
+  .error {
+    display: block;
+    color: red;
+    font-size: 13px;
+    margin-top: 3px;
+    height: 14px; /* evita que se mueva el formulario al aparecer */
+  }
+
+  #mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+  }
