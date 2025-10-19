@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <header>
+        <p class="posNombreWeb">Pausa Para K-Dramas - Admin</p>
+        <nav class="posBtnLoginRegistro">
+            <ul>
+                <li><a href="admin.html">Inicio Admin</a></li>
+                <li><a href="gestion_contenido.html">Gestión de Contenido</a></li>
+                <li><a href="index.html">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Gestión de Usuarios</h1>
+        <table class="tabla-usuarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>María Pérez</td>
+                    <td>maria@example.com</td>
+                    <td>Usuario</td>
+                    <td>
+                        <button class="editar">Editar</button>
+                        <button class="eliminar">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Juan López</td>
+                    <td>juan@example.com</td>
+                    <td>Admin</td>
+                    <td>
+                        <button class="editar">Editar</button>
+                        <button class="eliminar">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pausa Para K-Dramas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

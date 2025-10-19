@@ -1,0 +1,156 @@
+/* ========== ESTILOS PANEL USUARIO ========== */
+
+main {
+    padding: 60px 20px;
+    min-height: calc(100vh - 140px);
+    background: #fdfdfd;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Dashboard de usuario */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h2, .card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.card .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #e63946;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.card .btn:hover {
+    background: #c72f3a;
+}
+
+/* Perfil de usuario */
+.perfil-usuario {
+    background: #fff;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.perfil-usuario h2 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.perfil-usuario button {
+    background: #1d3557;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.perfil-usuario button:hover {
+    background: #457b9d;
+}
+
+/* Lista de favoritos */
+.lista-favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.lista-favoritos .card {
+    width: 250px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lista-favoritos img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.lista-favoritos h3 {
+    margin: 15px 0 5px;
+}
+
+.lista-favoritos p {
+    padding: 0 10px 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .dashboard, .lista-favoritos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .perfil-usuario {
+        width: 90%;
+    }
+}

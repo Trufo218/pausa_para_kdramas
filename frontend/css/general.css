@@ -1,22 +1,24 @@
-/* Estilos generales */
-* {
-    box-sizing: border-box; /* Evita que padding y border aumenten tamaño total */
-}
+/* ========== ESTILOS GENERALES ========== */
 
-html, body {
+/* Reset básico */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* Estructura */
+html, body {
+    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    height: 100%;
-    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    align-items: center; /* Centrado horizontal */
 }
 
 /* Cabecera */
@@ -28,21 +30,16 @@ header {
     justify-content: space-between;
     align-items: center;
     color: white;
-    box-sizing: border-box;
 }
 
-/* Nombre del sitio */
 .posNombreWeb {
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0;
 }
 
 /* Navegación */
 ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     gap: 15px;
 }
@@ -54,7 +51,6 @@ ul li a {
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
-    letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
@@ -70,12 +66,13 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
-    max-width: 1200px;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Encabezado h1 */
 h1 {
     text-align: center;
     font-size: 3rem;
@@ -83,7 +80,7 @@ h1 {
     color: #fff;
 }
 
-/* Grid de imágenes (ajuste para que no aparezca scroll) */
+/* Imágenes dentro del main */
 main img {
     max-width: 100%;
     height: auto;
@@ -97,41 +94,104 @@ footer {
     padding: 15px;
     background-color: #e91e63;
     color: white;
-    box-sizing: border-box;
 }
 
+/* ========== FORMULARIOS GENERALES ========== */
 
+form {
+    background-color: #fff;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+}
 
-/* Móviles (pantallas pequeñas) */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #e91e63;
+    outline: none;
+    box-shadow: 0 0 5px rgba(233, 30, 99, 0.4);
+}
+
+input.error-input {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+.error {
+    display: block;
+    color: red;
+    font-size: 13px;
+    min-height: 14px;
+    margin-top: 3px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e91e63;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d81b60;
+    transform: scale(1.03);
+}
+
+#mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsivo */
 @media (max-width: 767px) {
-    body header {
-        display: flex;
-        flex-direction: column; /* elementos en columna */
-        align-items: center;    /* centrar horizontalmente */
-        gap: 30px;              /* espacio entre nombre y botones */
-    }
-
-    .posBtnLoginRegistro ul {
-        display: flex;
-        flex-direction: column; /* apilar botones verticalmente */
-        gap: 30px
-    }
-}
-
-/* Tablets (pantallas medianas) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    body header {
-        display: flex;
-        flex-direction: column; /* columna también para tablets */
+    header {
+        flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .posBtnLoginRegistro ul {
-        display: flex;
-        flex-direction: column; /* botones apilados verticalmente */
-        gap: 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
-
-

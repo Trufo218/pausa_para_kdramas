@@ -1,9 +1,9 @@
-/* ========== ESTILOS REGISTRO ========== */
+/* ========== ESTILOS LOGIN ========== */
 
 /* Fondo con overlay */
 main {
     position: relative;
-    background: url("../assets/img/Registro_img/Collage_KDRAMA.jpeg") center/cover no-repeat;
+    background: url("../assets/img/Login_img/fondo_login.jpg") center/cover no-repeat;
     padding: 50px 20px;
 }
 
@@ -20,7 +20,7 @@ main * {
     z-index: 2;
 }
 
-/* Ajustes específicos del registro */
+/* Ajustes específicos del login */
 h1 {
     color: #fff;
 }
